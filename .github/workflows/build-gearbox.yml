@@ -4,12 +4,12 @@ on:
     branches:
       - main
   schedule:
-    - cron: '0 0 * * TUE'
+    - cron: '0 0 * * *'
   push:
     branches:
       - main
 env:
-    IMAGE_NAME: boxkit
+    IMAGE_NAME: gearbox
     IMAGE_TAGS: latest
     IMAGE_REGISTRY: ghcr.io/${{ github.repository_owner }}
 
