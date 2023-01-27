@@ -1,9 +1,10 @@
 FROM quay.io/toolbx-images/alpine-toolbox:3.17
 
-LABEL com.github.containers.toolbox="true" \
+#LABEL com.github.containers.toolbox="true" \
+LABEL org.opencontainers.image.description \
       usage="This image is meant to be used with the toolbox or distrobox command" \
       summary="A cloud-native terminal experience" \
-      maintainer="rudelsaldivar@gmail.com>"
+      maintainer="rudelsaldivar@gmail.com"
 
 COPY extra-packages /
 RUN apk update && \
