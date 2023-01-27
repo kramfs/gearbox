@@ -1,6 +1,6 @@
 FROM quay.io/toolbx-images/alpine-toolbox:3.17
 
-LABEL org.opencontainers.image.description "This image is meant to be used with the toolbox or distrobox command"
+LABEL org.opencontainers.image.description="This image is meant to be used with the toolbox or distrobox command"
 LABEL com.github.containers.toolbox="true" \
       usage="This image is meant to be used with the toolbox or distrobox command" \
       summary="A cloud-native terminal experience" \
