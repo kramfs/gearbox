@@ -1,4 +1,6 @@
+bat
 btop
+exa
 chezmoi
 cosign
 dbus-x11
@@ -6,15 +8,19 @@ ffmpeg
 fzf
 github-cli
 helix
+httpie
 just
 micro
 ncdu
 neofetch
 neovim
 plocate
+procs
 python3
 ripgrep
+skopeo
 speedtest-cli
 starship
 zstd
 zellij
+zoxide
