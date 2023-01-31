@@ -1,9 +1,11 @@
 bat
+bind-tools
 btop
 exa
 chezmoi
 cosign
 dbus-x11
+dog
 ffmpeg
 fzf
 github-cli
