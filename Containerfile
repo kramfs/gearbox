@@ -1,5 +1,5 @@
 #FROM quay.io/toolbx-images/alpine-toolbox:3.17
-FROM docker.io/library/ubuntu:22.04
+FROM docker.io/library/ubuntu:latest
 #FROM quay.io/toolbx-images/ubuntu-toolbox:22.04
 
 LABEL org.opencontainers.image.description="This image is meant to be used with the toolbox or distrobox command"
