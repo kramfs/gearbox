@@ -1,4 +1,5 @@
-FROM quay.io/toolbx-images/alpine-toolbox:3.17
+#FROM quay.io/toolbx-images/alpine-toolbox:3.17
+FROM mcr.microsoft.com/azure-cli:latest
 #FROM docker.io/library/ubuntu:latest
 #FROM quay.io/toolbx-images/ubuntu-toolbox:22.04
 
