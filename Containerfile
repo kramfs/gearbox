@@ -17,8 +17,22 @@ RUN apk update && \
 #    cat /extra-packages | xargs apt install -y
 RUN rm /extra-packages
 
+# TELEPORT
 RUN curl https://goteleport.com/static/install.sh | bash -s 12.0.2
 
+# TERRAFORM
+##RUN release=`curl -s https://api.github.com/repos/hashicorp/terraform/releases/latest | grep tag_name | cut -d: -f2 | tr -d \"\,\v | awk '{$1=$1};1'`
+#RUN curl -s https://api.github.com/repos/hashicorp/terraform/releases/latest | grep tag_name | cut -d: -f2 | tr -d \"\,\v > tf_latest
+##RUN wget "https://releases.hashicorp.com/terraform/${release}/terraform_${release}_linux_amd64.zip"
+#RUN cat tf_latest
+ENV TERRAFORM_VERSION 1.3.8
+RUN cd /usr/local/bin && \
+    curl https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip -o terraform_${TERRAFORM_VERSION}_linux_amd64.zip && \
+    unzip terraform_${TERRAFORM_VERSION}_linux_amd64.zip && \
+    chmod -v +x terraform && \
+    rm terraform_${TERRAFORM_VERSION}_linux_amd64.zip
+
+# DISTROBOX HOST-EXEC
 RUN   ln -fs /bin/sh /usr/bin/sh && \
       ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/docker && \
       ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/flatpak && \
