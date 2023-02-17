@@ -4,6 +4,7 @@ btop
 exa
 chezmoi
 cosign
+direnv
 dbus-x11
 dog
 ffmpeg
@@ -29,4 +30,3 @@ starship
 zstd
 zellij
 zoxide
-direnv
