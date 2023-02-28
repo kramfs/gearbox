@@ -19,7 +19,7 @@ RUN apk update && \
 RUN rm /extra-packages
 
 # TELEPORT
-RUN curl https://goteleport.com/static/install.sh | bash -s 12.0.2
+RUN curl https://goteleport.com/static/install.sh | bash -s 12.0.4
 
 # TERRAFORM
 ##RUN release=`curl -s https://api.github.com/repos/hashicorp/terraform/releases/latest | grep tag_name | cut -d: -f2 | tr -d \"\,\v | awk '{$1=$1};1'`
