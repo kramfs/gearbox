@@ -19,14 +19,14 @@ RUN apk update && \
 RUN rm /extra-packages
 
 # TELEPORT
-RUN curl https://goteleport.com/static/install.sh | bash -s 13.1.1
+RUN curl https://goteleport.com/static/install.sh | bash -s 15.0.2
 
 # TERRAFORM
 ##RUN release=`curl -s https://api.github.com/repos/hashicorp/terraform/releases/latest | grep tag_name | cut -d: -f2 | tr -d \"\,\v | awk '{$1=$1};1'`
 #RUN curl -s https://api.github.com/repos/hashicorp/terraform/releases/latest | grep tag_name | cut -d: -f2 | tr -d \"\,\v > tf_latest
 ##RUN wget "https://releases.hashicorp.com/terraform/${release}/terraform_${release}_linux_amd64.zip"
 #RUN cat tf_latest
-ENV TERRAFORM_VERSION 1.5.0
+ENV TERRAFORM_VERSION 1.7.3
 RUN cd /usr/local/bin && \
     curl https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip -o terraform_${TERRAFORM_VERSION}_linux_amd64.zip && \
     unzip terraform_${TERRAFORM_VERSION}_linux_amd64.zip && \
